@@ -1,5 +1,5 @@
 /////////// Prompt 1 ///////////
-/////////// time complexity: 
+/////////// time complexity: linear depends on length of the array
 function findMax(array){
   var max = -Infinity;
   for (var i = 0; i < array.length; i++){
@@ -12,22 +12,22 @@ function findMax(array){
 
 
 /////////// Prompt 2 ///////////
-/////////// time complexity: 
+/////////// time complexity: linear
 function contains(array, target){
   return array.indexOf(target) > -1;
 }
 
 
 /////////// Prompt 3 ///////////
-/////////// time complexity: 
+/////////// time complexity: slice is linear therefore linear
 function partialContains(array, target, start){
   return array.slice(start).indexOf(target) > -1;
 }
 
 
 /////////// Prompt 4 ///////////
-/////////// time complexity: 
-function square(array){
+/////////// time complexity: constant 
+function square(array){ 
   for (var i = 0; i < 3; i++){
     array[i] = array[i] * array[i];
   }
@@ -35,7 +35,7 @@ function square(array){
 }
 
 /////////// Prompt 5 ///////////
-/////////// time complexity: 
+/////////// time complexity: linear
 function repeat(array){
   var repeat = [];
   for (var j = 0; j < 10; j++){
@@ -47,10 +47,11 @@ function repeat(array){
   return repeat; 
 }
 //what if we replace 10 with a parameter? 
+//quadratic
 
 
 /////////// Prompt 6 ///////////
-/////////// time complexity: 
+/////////// time complexity: linear
 function gcf(num1, num2){
   if (num1 > num2){ //this ensures num1 is the smaller number
     var temp = num1;
@@ -67,7 +68,7 @@ function gcf(num1, num2){
 
 
 /////////// Prompt 7 ///////////
-/////////// time complexity: 
+/////////// time complexity: quadratic
 function countChar(string){
   var counts = {};
   var currChar, currCharCount;
@@ -88,7 +89,7 @@ function countChar(string){
 
 
 /////////// Prompt 8 ///////////
-/////////// time complexity: 
+/////////// time complexity: linear
 var factorial = function(num){
   if (num < 0){
     return;
@@ -102,7 +103,7 @@ var factorial = function(num){
 
 
 /////////// Prompt 9 ///////////
-/////////// time complexity: 
+/////////// time complexity: logarithmic: players is n
 function tournament(players){
   var results;
   if (players.length < 3){
@@ -121,7 +122,7 @@ function tournament(players){
 
 
 /////////// Prompt 10 ///////////
-/////////// time complexity: 
+/////////// time complexity:  exponential: c^n where c is allowed characters, n is the the possible length of the password
 function allPasswords(allowedChars, maxLength){
   var results = [];
 
@@ -142,7 +143,7 @@ function allPasswords(allowedChars, maxLength){
 
 
 /////////// Prompt 11 ///////////
-/////////// time complexity: 
+/////////// time complexity: log4(n)
 function findColor(quadTree, coordinates){
   //a quad tree is a tree where each node has 4 children 
   //or no children, usually used to divide a two-dimensional
